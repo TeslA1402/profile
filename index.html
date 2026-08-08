@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Timeev (TeslA1402) — Java Developer | Портфолио и GitHub Проекты</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Персональная витрина проектов и Open Source вклада Ивана Тимеева (TeslA1402), Java-разработчика из Челябинска. Достижения GitHub, собственные репозитории и контакты.">
+    <meta name="keywords" content="Ivan Timeev, TeslA1402, Java Developer, Java разработчик, GitHub, Open Source, Челябинск, Backend Developer, rabbitmq-alert, claude-code-router, qfp">
+    <meta name="author" content="Ivan Timeev">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Ivan Timeev (TeslA1402) — Java Developer">
+    <meta property="og:description" content="Витрина личных проектов, Open Source контрибьюций и достижений Java-разработчика Ивана Тимеева.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/32321577?v=4">
+    <meta property="profile:username" content="TeslA1402">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ivan Timeev (TeslA1402) — Java Developer">
+    <meta name="twitter:description" content="Витрина личных проектов и Open Source вклада Java-разработчика.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/32321577?v=4">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/32321577?v=4" type="image/x-icon">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ivan Timeev",
+      "alternateName": "TeslA1402",
+      "jobTitle": "Java Developer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chelyabinsk",
+        "addressCountry": "Russia"
+      },
+      "image": "https://avatars.githubusercontent.com/u/32321577?v=4",
+      "sameAs": [
+        "https://github.com/TeslA1402"
+      ],
+      "knowsAbout": [
+        "Java",
+        "Spring Boot",
+        "Backend Development",
+        "Open Source",
+        "RabbitMQ",
+        "Git",
+        "Microservices",
+        "TypeScript",
+        "Python"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-color: #58a6ff;
+            --accent-green: #238636;
+            --badge-bg: #21262d;
+            --gold: #f1e05a;
+            --purple: #bc8cff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+        }
+
+        .profile-info h1 {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        .profile-info .username {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .profile-info .bio {
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .meta-list {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .meta-list a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .meta-list a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .card h3 a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .lang-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .badge-list {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1 1 250px;
+        }
+
+        .badge-item img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .badge-title {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .badge-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .role-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .role-owner {
+            background-color: rgba(35, 134, 54, 0.2);
+            color: #3fb950;
+            border: 1px solid rgba(57, 211, 83, 0.3);
+        }
+
+        .role-contributor {
+            background-color: rgba(188, 140, 255, 0.15);
+            color: var(--purple);
+            border: 1px solid rgba(188, 140, 255, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Header -->
+        <header>
+            <img src="https://avatars.githubusercontent.com/u/32321577?v=4" alt="Ivan Timeev (TeslA1402)" class="avatar">
+            <div class="profile-info">
+                <h1>Ivan Timeev</h1>
+                <div class="username">@TeslA1402</div>
+                <p class="bio">Java developer | Backend Engineering & Open Source Contributor</p>
+                <div class="meta-list">
+                    <span>📍 Челябинск, Россия</span>
+                    <span>💻 GitHub: <a href="https://github.com/TeslA1402" target="_blank" rel="noopener">github.com/TeslA1402</a></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <h2>Достижения на GitHub (Achievements)</h2>
+            <div class="badge-list">
+                <div class="badge-item">
+                    <img src="https://github.githubassets.com/assets/arctic-code-vault-contributor-default-df8d74122a06.png" alt="Arctic Code Vault Contributor Badge">
+                    <div>
+                        <div class="badge-title">Arctic Code Vault Contributor</div>
+                        <div class="badge-desc">Внёс вклад в открытый код, сохранённый в арктическом архиве GitHub 2020.</div>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" alt="Pull Shark Badge">
+                    <div>
+                        <div class="badge-title">Pull Shark</div>
+                        <div class="badge-desc">Активно создаёт Pull Request'ы и участвует в разработке.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Personal Projects -->
+        <section id="personal-projects">
+            <h2 style="border-left-color: var(--accent-green);">Мои проекты (Author / Owner)</h2>
+            <div class="grid">
+                
+                <article class="card">
+                    <div>
+                        <span class="role-badge role-owner">Автор / Создатель</span>
+                        <h3><a href="https://github.com/TeslA1402/TelegramQuestionAndAnswerBot" target="_blank" rel="noopener">TelegramQuestionAndAnswerBot</a></h3>
+                        <p>Telegram-бот для автоматизации ответов на вопросы и проведения опросов. Реализован интерактивный UI-взаимодействие с пользователями в чате.</p>
+                    </div>
+                    <div class="card-tags">
+                        <span class="lang-dot" style="background-color: #b07219;"></span>
+                        <span>Java / Telegram API</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <span class="role-badge role-owner">Автор / Создатель</span>
+                        <h3><a href="https://github.com/TeslA1402/SearchEngine" target="_blank" rel="noopener">SearchEngine</a></h3>
+                        <p>Локальный поисковый движок для индексации и поиска по текстовым данным. Поддерживает парсинг страниц, ранжирование результатов и быстрый поиск.</p>
+                    </div>
+                    <div class="card-tags">
+                        <span class="lang-dot" style="background-color: #b07219;"></span>
+                        <span>Java / Spring Boot / SQL</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <span class="role-badge role-owner">Автор / Создатель</span>
+                        <h3><a href="https://github.com/TeslA1402?tab=repositories" target="_blank" rel="noopener">Другие Java & Backend проекты</a></h3>
+                        <p>Коллекция микросервисов, утилит и сервисов на Java и Spring Boot: проектирование RESTful API, интеграция с СУБД и брокерами сообщений.</p>
+                    </div>
+                    <div class="card-tags">
+                        <span class="lang-dot" style="background-color: #b07219;"></span>
+                        <span>Java / Spring Boot</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Section 2: Open Source Contributions -->
+        <section id="open-source-contributions">
+            <h2 style="border-left-color: var(--purple);">Вклад в Open Source (Contributor)</h2>
+            <div class="grid">
+                
+                <article class="card">
+                    <div>
+                        <span class="role-badge role-contributor">Contributor</span>
+                        <h3><a href="https://github.com/musistudio/claude-code-router" target="_blank" rel="noopener">musistudio / claude-code-router</a></h3>
+                        <p>Прокси-сервер и маршрутизатор запросов для Claude Code. Позволяет перенаправлять запросы к AI-моделям (Claude, OpenAI, Gemini) и кастомным провайдерам.</p>
+                    </div>
+                    <div class="card-tags">
+                        <span class="lang-dot" style="background-color: #3178c6;"></span>
+                        <span>TypeScript / Node.js</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <span class="role-badge role-contributor">Contributor</span>
+                        <h3><a href="https://github.com/mbortnyck/qfp" target="_blank" rel="noopener">mbortnyck / qfp</a></h3>
+                        <p>Библиотека акустических отпечатков пальцев (audio fingerprinting) на Python для распознавания и поиска аудиофайлов.</p>
+                    </div>
+                    <div class="card-tags">
+                        <span class="lang-dot" style="background-color: #3572A5;"></span>
+                        <span>Python / Audio Processing</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <span class="role-badge role-contributor">Contributor</span>
+                        <h3><a href="https://github.com/gfronza/rabbitmq-alert" target="_blank" rel="noopener">gfronza / rabbitmq-alert</a></h3>
+                        <p>Легковесный сервис мониторинга и оповещений о состоянии очередей RabbitMQ с отправкой уведомлений в мессенджеры и сторонние каналы.</p>
+                    </div>
+                    <div class="card-tags">
+                        <span class="lang-dot" style="background-color: #3572A5;"></span>
+                        <span>Python / RabbitMQ / Docker</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="skills">
+            <h2>Технологический стек</h2>
+            <div class="card">
+                <p><strong>Основной стек:</strong> Java (SE/EE), Spring Framework, Spring Boot, REST API, JPA / Hibernate.</p>
+                <p><strong>Инфраструктура и инструменты:</strong> Docker, RabbitMQ, Git, Linux, Maven / Gradle.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Ivan Timeev (TeslA1402). Персональная страница-витрина.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
